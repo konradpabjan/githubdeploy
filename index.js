@@ -13,9 +13,9 @@ async function run() {
         auto_merge: false,
         description: "This is a test of a deployment", 
         environment: "production",
-        owner: context.payload.owner,
-        ref: context.payload.pull_request.ref,
-        repo: context.payload.repo
+        owner: context.payload.repository.owner,
+        ref: context.payload.pull_request.head.ref,
+        repo: context.payload.repository.name
     };
     console.log(info);
 
