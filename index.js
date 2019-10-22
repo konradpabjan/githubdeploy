@@ -7,6 +7,7 @@ async function run() {
     const context = github.context;
 
     console.log("Ayoo this works!");
+    console.log(context.payload);
 
     var info = {
         auto_merge: false,
