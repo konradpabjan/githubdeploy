@@ -14,7 +14,7 @@ async function run() {
         description: "This is a test of a deployment", 
         environment: "production",
         owner: context.payload.repository.owner.login,
-        ref: context.payload.ref,
+        ref: context.payload.pull_request.head.ref,
         repo: context.payload.repository.name
     };
     console.log(info);
