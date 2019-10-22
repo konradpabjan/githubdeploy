@@ -13,7 +13,7 @@ async function run() {
         auto_merge: false,
         description: "This is a test of a deployment", 
         environment: "production",
-        owner: context.payload.repository.owner,
+        owner: context.payload.repository.owner.login,
         ref: context.payload.pull_request.head.ref,
         repo: context.payload.repository.name
     };
