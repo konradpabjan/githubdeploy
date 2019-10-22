@@ -1,0 +1,9 @@
+name: 'Create a deployment'
+description: 'TODO'
+inputs:
+  action-token:
+    description: 'Token from the action'
+    required: true
+runs:
+  using: 'node12'
+  main: 'index.js'
