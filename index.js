@@ -6,7 +6,7 @@ async function run() {
     const octokit = new github.GitHub(myToken);
     const context = github.context;
 
-    return "Ayoo this works!";
+    console.log("Ayoo this works!");
 
     var info = {
         auto_merge: false,
@@ -16,6 +16,7 @@ async function run() {
         ref: context.payload.pull_request.ref,
         repo: context.payload.repo
     };
+    console.log(info);
 
     return await octokit.repos.createDeployment(info);
 }
